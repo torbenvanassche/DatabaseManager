@@ -14,8 +14,7 @@ grow_vertical = 2
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="Grid" type="GridContainer" parent="."]
+[node name="FlowContainer" type="HFlowContainer" parent="."]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-columns = 5
 script = ExtResource("1_5skd3")
-elements = 20

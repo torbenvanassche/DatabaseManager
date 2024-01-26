@@ -1,5 +1,4 @@
-res://scenes/viewport_liverenderer.tscn
-res://scenes/viewport_texture.tscn
 res://scenes/viewport_grid.tscn
 res://scripts/grid_controller.gd
+res://scenes/viewport_liverenderer.tscn
 res://scripts/viewport_controller.gd
