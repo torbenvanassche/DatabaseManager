@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1706276163
+camera.tscn::PackedScene::6210575713506958449::1706276129::0::1::::<><>::res://scripts/Camera3D.gd
+icon.svg::CompressedTexture2D::1717270257014078748::1706274030::1706274040::1::::<><>::
+viewport_control.tscn::PackedScene::2245240962069752829::1706276166::0::1::::<><>::res://scripts/viewport_controller.gd<>uid://cuqpjlp4i7pkb::::res://camera.tscn
+::res://scenes/::1706276163
+::res://scripts/::1706276129
+Camera3D.gd::GDScript::-1::1706275912::0::1::::ViewportCamera<>Node3D<>::
+grid_controller.gd::GDScript::-1::1706276129::0::1::::<>Node<>::
+viewport_controller.gd::GDScript::-1::1706275972::0::1::::<>SubViewportContainer<>::

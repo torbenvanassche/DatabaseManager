@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://68u147gt08q8"]
+
+[ext_resource type="Script" path="res://scripts/viewport_controller.gd" id="1_uv2b5"]
+[ext_resource type="PackedScene" uid="uid://cuqpjlp4i7pkb" path="res://scenes/camera.tscn" id="2_5rywf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4l2fh"]
+
+[node name="SubViewportContainer" type="SubViewportContainer"]
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_uv2b5")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(100, 100)
+render_target_update_mode = 4
+
+[node name="CameraRoot" parent="SubViewport" node_paths=PackedStringArray("target") instance=ExtResource("2_5rywf")]
+target = NodePath("../MeshInstance3D")
+distance = 2.0
+max_distance = 5.0
+min_distance = 1.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport"]
+mesh = SubResource("BoxMesh_4l2fh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport"]
+transform = Transform3D(0.628696, 0.483738, -0.608883, 0, 0.782977, 0.62205, 0.777651, -0.391081, 0.492255, -2.18352, 2.61831, 1.8038)

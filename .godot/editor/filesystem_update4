@@ -1,0 +1,8 @@
+res://main_scene.tscn
+res://camera.tscn
+res://scripts/Camera3D.gd
+res://scripts/viewport_controller.gd
+res://viewport_control.tscn
+res://scripts/grid_controller.gd
+res://scenes/viewport_grid.tscn
+res://scenes/viewport_control.tscn
