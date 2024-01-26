@@ -1,12 +1,20 @@
 extends GridContainer
 
-@export var elements = 250;
-var viewport_scene:PackedScene = preload("res://scenes/viewport_control.tscn")
+@export var elements = 10;
+@export var texture_size = 100;
 
-# Called when the node enters the scene tree for the first time.
+@onready var sub_view: SubViewportContainer = $"../SubViewportContainer"
+
 func _ready():
+	_ready_defer.call_deferred();
+
+func _ready_defer():
 	for x in elements:
-		var vp: SubViewportContainer = viewport_scene.instantiate();
-		print(get_viewport_rect().size.x)
-		columns = get_viewport_rect().size.x / vp.viewport_size.x;
-		add_child(vp)
+		var texture: TextureRect = TextureRect.new();
+		texture.size = Vector2(texture_size, texture_size);
+		
+		await RenderingServer.frame_post_draw
+		var image = sub_view.viewport.get_texture().get_image().save_png("res://test.png")
+		texture.texture = load("res://test.png")
+		columns = get_viewport_rect().size.x / texture_size;
+		add_child(texture)

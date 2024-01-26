@@ -1,12 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbgya03qylfvs"]
+[gd_scene load_steps=3 format=3 uid="uid://cbgya03qylfvs"]
 
 [ext_resource type="Script" path="res://scripts/grid_controller.gd" id="1_5skd3"]
+[ext_resource type="PackedScene" uid="uid://cf0wgdoxm5nof" path="res://scenes/viewport_liverenderer.tscn" id="2_tmkk8"]
 
-[node name="Grid" type="GridContainer"]
+[node name="HSplitContainer" type="HSplitContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="SubViewportContainer" parent="." instance=ExtResource("2_tmkk8")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="."]
+layout_mode = 2
 columns = 5
 script = ExtResource("1_5skd3")
+elements = 20
