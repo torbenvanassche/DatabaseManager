@@ -18,3 +18,4 @@ layout_mode = 2
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 script = ExtResource("1_5skd3")
+file_dir = "C:/Users/BE-TORBE/Documents/GitHub/data_test"
